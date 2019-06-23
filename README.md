@@ -1,6 +1,6 @@
 # Node-ToDo-List
 
-Node service making use of Express, RabbitMQ, Redis &amp; Mongoose. The service polls a messaging queue with the help of RabbitMQ to check for the presence of new mesagges which inform the service about presence of data (To-Do items) in Redis database. The service then reads this data from Redis and uploads it into a mongodb database, deleting it from Redis while acknowledging the message present on messaging queue. The service also provides a GET api endpoint to serve the data stored in mongodb to users in JSON format.
+Node service to handle day to day To-Do tasks by making use of Express, RabbitMQ, Redis &amp; Mongoose. The service polls a messaging queue with the help of RabbitMQ to check for the presence of new mesagges which inform the service about presence of data (To-Do items) in Redis database. The service then reads this data from Redis and uploads it into a mongodb database, deleting it from Redis while acknowledging the message present on messaging queue. The service also provides a GET api endpoint to serve the data stored in mongodb to users in JSON format.
 
 
 # Steps to Setup
