@@ -5,30 +5,35 @@ Node service making use of Express, RabbitMQ, Redis &amp; Mongoose. The service 
 
 # Steps to Setup
  
- 1. Install dependencies by using following command:
+ 1. Clone the project. 
+ 
+ 2. Install dependencies by using following command: <br />
+    ````bash 
     npm install
+    ````
     
- 2. Configure following values in .env file:
-    PORT = < Port on which the service will run >
-    MSG_QNAME = < Queue name configured (on which service will poll for messages) in RabbitMQ >
-    POLL_TIME = < Wait time before polling message queue again >
-    AMQP_URL = < RabbitMQ connection url >
-    REDIS_PORT = < Port on which redis server is running >
-    REDIS_HOST = < Host address where redis server is running >
-    MONGO_CONN_STR = < Connection url for mongodb >
+ 3. Configure following values in .env file: <br />
+    PORT = < Port on which the service will run > <br />
+    MSG_QNAME = < Queue name configured (on which service will poll for messages) in RabbitMQ > <br />
+    POLL_TIME = < Wait time before polling message queue again > <br />
+    AMQP_URL = < RabbitMQ connection url > <br />
+    REDIS_PORT = < Port on which redis server is running > <br />
+    REDIS_HOST = < Host address where redis server is running > <br />
+    MONGO_CONN_STR = < Connection url for mongodb > <br />
     
-    Sa,ple config values are as follows:
-    PORT = 3000
-    MSG_QNAME = todolistqueue
-    POLL_TIME = 3e3
-    AMQP_URL = amqp://guest:guest@localhost:5672
-    REDIS_PORT = 6379
-    REDIS_HOST = 127.0.0.1
-    MONGO_CONN_STR = mongodb://localhost/ToDoDB
+    Sample config values are as follows: <br />
+    PORT = 3000 <br />
+    MSG_QNAME = todolistqueue <br />
+    POLL_TIME = 3e3 <br />
+    AMQP_URL = amqp://guest:guest@localhost:5672 <br />
+    REDIS_PORT = 6379 <br />
+    REDIS_HOST = 127.0.0.1 <br />
+    MONGO_CONN_STR = mongodb://localhost/ToDoDB <br />
     
- 3. Start the service using following command:
+ 4. Start the service using following command: <br />
+    ````bash 
     npm start
-
+    ````
 
 You can browse the apis GET endpoint at http://< Node Service Host Address >:< Configured Port>. 
 Eg: http://localhost:3000 
