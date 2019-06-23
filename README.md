@@ -22,18 +22,20 @@ Node service making use of Express, RabbitMQ, Redis &amp; Mongoose. The service 
     MONGO_CONN_STR = < Connection url for mongodb > <br />
     
     Sample config values are as follows: <br />
-    PORT = 3000 <br />
-    MSG_QNAME = todolistqueue <br />
-    POLL_TIME = 3e3 <br />
-    AMQP_URL = amqp://guest:guest@localhost:5672 <br />
-    REDIS_PORT = 6379 <br />
-    REDIS_HOST = 127.0.0.1 <br />
-    MONGO_CONN_STR = mongodb://localhost/ToDoDB <br />
+    ````js
+    PORT = 3000
+    MSG_QNAME = todolistqueue
+    POLL_TIME = 3e3
+    AMQP_URL = amqp://guest:guest@localhost:5672
+    REDIS_PORT = 6379
+    REDIS_HOST = 127.0.0.1
+    MONGO_CONN_STR = mongodb://localhost/ToDoDB
+    ````
     
  4. Start the service using following command: <br />
     ````bash 
     npm start
     ````
-
+<br />
 You can browse the apis GET endpoint at http://< Node Service Host Address >:< Configured Port>. 
 Eg: http://localhost:3000 
